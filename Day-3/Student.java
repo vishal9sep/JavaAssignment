@@ -25,12 +25,14 @@ public class Student {
 		s1.name = "Vishal Singh";
 		s1.marks = 90;
 		s1.displayStudentDetails();
+		s1 = null;
 		
 		Student s2 = s1;
 		s2.roll = 12;
 		s2.name = "Elon Musk";
 		s2.marks = 98;
 		s2.displayStudentDetails();
+		s2 = null;
 
 	}
 
