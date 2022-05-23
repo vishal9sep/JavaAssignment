@@ -1,6 +1,6 @@
 package com.Ques2;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Course {
 	
@@ -22,10 +22,16 @@ public class Course {
 		if(username == "Admin" && password == "1234") {
 			Course c1 = new Course();
 			
-			c1.courseId = 111;
-			c1.courseName = "Java-Backend Course";
-			c1.courseFee = 3000;
+			Scanner scn = new Scanner(System.in);
+			
+			System.out.println("Enter Course ID");
+			c1.courseId = scn.nextInt();
+			System.out.println("Enter Course Name");
+			c1.courseName = scn.next();
+			System.out.println("Enter Course Fee");
+			c1.courseFee = scn.nextInt();
 			c1.displayCourseDetails();
+			scn.close();
 		}
 		else {
 			System.out.println("Invalid Username or password");
@@ -34,16 +40,10 @@ public class Course {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner scn = new Scanner(System.in);
-		
-		System.out.println("Enter Username : ");
-		String userName = scn.next();
-		System.out.println("Enter Password : ");
-		String pwd = scn.next();
-		
-//		System.out.println(userName + " "+ pwd);
-		Course.authenticate(userName, pwd);
-		scn.close();
+
+		Course.authenticate("Admin", "1234");
+		System.out.println("===========================");
+		Course.authenticate("user", "4231");
 	}
 
 }
