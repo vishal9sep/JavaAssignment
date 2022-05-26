@@ -1,0 +1,12 @@
+Dynamic polymorphism is a process or mechanism in which a call to an overridden method is to resolve at runtime rather than compile-time.
+It is also known as runtime polymorphism or dynamic method dispatch. We can achieve dynamic polymorphism by using the method overriding.
+
+In this process, an overridden method is called through a reference variable of a superclass. 
+The determination of the method to be called is based on the object being referred to by the reference variable.
+
+# Properties of Dynamic Polymorphism
+    1.It decides which method is to execute at runtime.
+    2.It can be achieved through dynamic binding.
+    3.It happens between different classes.
+    4.It is required where a subclass object is assigned to a super-class object for dynamic polymorphism.
+    5.Inheritance involved in dynamic polymorphism.
