@@ -1,1 +1,35 @@
+Is-A Relationship
 
+An IS-A relationship is inheritance,the classes which inherit are known as sub classes or child
+classes.In this we can say that child class is a type of parent class.
+for eg-an apple is a fruit,so you will extend fruit to get apple
+
+class Apple extends Fruit{
+	}
+It is a static(compile time)binding
+
+Has-A Relationship
+
+An Has-A Relationship is composition means creating instances which have references to other objects.
+for eg- a room has a table,so you will create a class room and then in that class create an instance of
+type table.
+
+class Room{
+ Table table=new Table();
+ }
+It is dynamic(runtime binding)
+
+
+Access modifiers and their accessibility
+Their are types of java access modifiers:
+1. Private-The access level of private modifier is only within the class.
+It can't be accessed from outside the class
+
+2. Default-The access level of a default modifier is only within the package.
+It can't be accessed from outside the package.If you donot specify any access level,it will be the default.
+
+3. Protected- the access level of protected modifier is within the package and outside the package
+through child class.If you don't make the child class,it can't be accessed from outside the package
+
+4. Public-the access level of a public modifier is everywhere.It can be accessed 
+within the class,outside the class,within the package and outside the package.
