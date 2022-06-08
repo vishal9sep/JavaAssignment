@@ -1,1 +1,64 @@
-
+Question: Explain Finally and Final Keyword with an Example?
+Answer:
+	"finally" block is a keyword used along with try-catch block to make sure that the
+	program inside the finally block will irrespective of whether the exception was handled
+	or not.
+	
+	For e.g. -->
+	      public class Main{
+	          public static int hey(int num) throws ArithmeticException{
+	              if(num > 10){
+	                  return num % 2;
+	              }
+	              else{
+	                 throw new ArithmeticException();
+	              }
+	          }
+	      
+	          public static void main(String[] args){
+	             try{
+	                int x = 20;
+	                int y = hey(x);
+	                System.out.println("reached the end of try block. The value of y is " + y);
+	             }
+	             catch(Exception e){
+	                System.out.println("reached catch block due to exception");
+	             }
+	             finally{
+	                System.out.prinln("reached finally block");
+	             }
+	          }
+	      }
+	      
+	      In this example if I will pass input more than 10 the output will be:-
+	      
+	      reached the end of try block, The value of y is 0.
+	      reacehd finally block.
+	      
+	      but if I will pass value less than or equals to 10 the output will be:-
+	      
+	      reached catch block due to exception
+	      reached finally block
+	      
+	      In both cases finally block executed irrespective of whether it threw an exception or not.
+	
+	
+	
+	
+	"final" keyword is used to declare that value of the variable or method cannot be overriden.
+	For example -->
+	      public class Main{
+	          
+	          public static void main(String[] args){
+	              NewObj newObj = new NewObj();
+	              newObj.a = 20;
+	              System.out.println(10);
+	          }
+	      }
+	      
+	      class NewObj{
+	         final public int a = 10;
+	      }
+	      
+	      This program will throw a compile time error because we are trying to change a
+	      varibale with final keyword as signature.
